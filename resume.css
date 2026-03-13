@@ -228,7 +228,6 @@ a {
 
   body {
     color: #1a1a1a;
-    font-weight: 360;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -249,26 +248,23 @@ a {
     margin-top: 16px;
   }
 
+  /* Keep section headings attached to first entry below them */
   .resume-section h2 {
-    font-size: 0.95rem;
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
-  .resume-entry-header h3,
-  .resume-awards h3 {
-    font-size: 0.9rem;
+  /* Prevent entries from splitting across pages */
+  .resume-entry,
+  .resume-awards {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
-  .resume-bullets li,
-  .resume-tech-stack p,
-  .resume-summary,
-  .resume-entry-subtitle,
-  .resume-entry-date,
-  .resume-entry-link {
-    font-size: 0.82rem;
-  }
-
-  .resume-coursework p {
-    font-size: 0.8rem;
+  /* Force Projects section onto a new page */
+  .resume-page-break {
+    break-before: always;
+    page-break-before: always;
   }
 
   /* Restore 2-column layouts — print width (~698px) triggers the mobile breakpoint */
@@ -283,5 +279,10 @@ a {
 
   .resume-coursework {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px 16px;
+  }
+
+  .resume-coursework p {
+    font-size: 0.79rem;
   }
 }

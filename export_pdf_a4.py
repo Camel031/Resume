@@ -56,9 +56,14 @@ def navigate_and_print(ws_url, page_url, out_path):
     # Enable Page domain
     send("Page.enable")
     time.sleep(0.2)
-    
+
     # Enable Runtime domain for JS evaluation
     send("Runtime.enable")
+    time.sleep(0.1)
+
+    # Emulate screen media BEFORE navigation so Chrome uses screen CSS throughout.
+    # This makes fonts and layout in the PDF identical to the browser view.
+    send("Emulation.setEmulatedMedia", {"media": "screen"})
     time.sleep(0.1)
 
     # Navigate
@@ -73,9 +78,26 @@ def navigate_and_print(ws_url, page_url, out_path):
     })
     wait_for(expected_id=font_id, timeout=15)
 
-    # Extra settle time for layout/render
-    time.sleep(1.5)
-    
+    # Inject print-prep CSS:
+    #   - Strip decorative shell (gray background, box-shadow)
+    #   - Reset paper to full-width so @page margins serve as padding
+    #   - Re-apply page-break rules (normally in @media print, inactive in screen mode)
+    css_rules = " ".join([
+        "html,body{background:#fff!important;}",
+        ".resume-shell{background:#fff!important;padding:0!important;min-height:auto!important;}",
+        ".resume-paper{box-shadow:none!important;width:100%!important;max-width:100%!important;padding:0!important;margin:0!important;}",
+        ".resume-section{margin-top:16px!important;}",
+        ".resume-section h2{break-after:avoid;page-break-after:avoid;}",
+        ".resume-entry,.resume-awards{break-inside:avoid;page-break-inside:avoid;}",
+        ".resume-page-break{break-before:always!important;page-break-before:always!important;}",
+    ])
+    inject_js = f"(function(){{var s=document.createElement('style');s.textContent={json.dumps(css_rules)};document.head.appendChild(s);}})();"
+    inject_id = send("Runtime.evaluate", {"expression": inject_js, "awaitPromise": False})
+    wait_for(expected_id=inject_id, timeout=5)
+
+    # Settle after CSS injection for reflow
+    time.sleep(1.0)
+
     # Print to PDF — A4: 8.27 × 11.69 inches, margins 0.5 inch each side
     pdf_id = send("Page.printToPDF", {
         "paperWidth":     8.27,

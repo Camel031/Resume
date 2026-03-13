@@ -17,7 +17,7 @@
             <p class="resume-summary">
               Security-focused software engineer and researcher at NTNU. Builds production systems
               spanning sandbox design, DevSecOps delivery, and full-stack development while conducting
-              FHE-based behavioral authentication research. Proven track record across 700-person
+              FHE-based behavioral authentication research. Proven track record across 1000-person
               conference operations, live-venue show production infrastructure, and competitive programming
               community leadership.
             </p>
@@ -63,27 +63,26 @@
             <p class="resume-entry-subtitle" style="margin-top:3px;">Advisor: Prof. 紀博文 (Chi Po-Wen)</p>
             <ul class="resume-bullets">
               <li>
-                Research problem: traditional continuous authentication exposes privacy by
+                <strong>Problem:</strong> traditional continuous authentication exposes privacy by
                 transmitting or storing raw behavioral signals.
               </li>
               <li>
-                Designing a privacy-preserving continuous authentication pipeline processing
-                multi-modal behavioral signals — mouse dynamics, keystroke patterns, and touch
-                gestures — using Fully Homomorphic Encryption (FHE).
+                <strong>Design:</strong> privacy-preserving pipeline processing multi-modal behavioral
+                signals — mouse dynamics, keystroke patterns, touch gestures — using FHE.
               </li>
               <li>
-                Implementing feature extraction and ciphertext-domain inference so the
-                authentication server learns nothing beyond an accept/reject result.
+                <strong>Implementation:</strong> feature extraction and ciphertext-domain inference so
+                the authentication server learns nothing beyond an accept/reject result.
               </li>
               <li>
-                Keywords: Privacy-Preserving, Behavioral Biometrics, Homomorphic Encryption,
-                Continuous Authentication, Implementation.
+                <strong>Keywords:</strong> Privacy-Preserving, Behavioral Biometrics, Homomorphic
+                Encryption, Continuous Authentication.
               </li>
             </ul>
           </article>
         </section>
 
-        <section class="resume-section">
+        <section class="resume-section resume-page-break">
           <h2>Projects</h2>
 
           <article class="resume-entry">
@@ -97,23 +96,23 @@
             </p>
             <ul class="resume-bullets">
               <li>
-                Developed a full evasion chain with PPID spoofing, dynamic IAT resolution, XOR +
-                Base64 payload encryption, and decoy process injection to bypass static signatures
-                and behavioral analysis.
+                <strong>Offense:</strong> full evasion chain with PPID spoofing, dynamic IAT
+                resolution, XOR + Base64 payload encryption, and decoy process injection to bypass
+                static signatures and behavioral analysis.
               </li>
               <li>
-                Extracted target flags via VirtualQueryEx + ReadProcessMemory and retrieved
-                browser-stored credentials with Living-off-the-Land techniques without dropping
-                binaries to disk.
+                <strong>Exfiltration:</strong> extracted target flags via VirtualQueryEx +
+                ReadProcessMemory; retrieved browser-stored credentials with LotL techniques
+                without dropping binaries to disk.
               </li>
               <li>
-                Co-built an ETW-based monitor with file I/O and TCP event tracing; implemented
-                recursive parent-chain attribution to associate spawned processes with malicious
-                ancestors.
+                <strong>Defense:</strong> co-built an ETW-based monitor with file I/O and TCP event
+                tracing; implemented recursive parent-chain attribution to associate spawned
+                processes with malicious ancestors.
               </li>
               <li>
-                Produced detailed exploit chains with root-cause analysis and detection signatures
-                for each attack path.
+                <strong>Reporting:</strong> produced detailed exploit chains with root-cause analysis
+                and detection signatures for each attack path.
               </li>
             </ul>
           </article>
@@ -129,30 +128,27 @@
             </p>
             <ul class="resume-bullets">
               <li>
-                Served as full-stack Tech Lead and Sandbox subteam lead in a 14-person team maintaining NTNU CS
-                Department's production online judge system; acted as de facto architect and
+                <strong>Role:</strong> Full-stack Tech Lead and Sandbox subteam lead in a 14-person team
+                maintaining NTNU CS Department's production online judge; acted as de facto architect and
                 interim PM during PM absences.
               </li>
               <li>
-                Architected a multi-mode execution pipeline supporting Standard, Interactive, ZIP,
-                Function-only, and AI-Checker submissions.
+                <strong>Sandbox &amp; Security:</strong> Architected multi-mode execution pipeline
+                (Standard, Interactive, ZIP, Function-only, AI-Checker); extended seccomp rules and built
+                network isolation via DNS sinkhole and IPv6 blocking for multi-tenant sandboxing.
               </li>
               <li>
-                Extended seccomp rules and built network isolation with DNS sinkhole and IPv6
-                blocking for multi-tenant sandbox security.
+                <strong>Backend:</strong> Designed pipeline configuration schema and REST APIs; implemented
+                artifact collection, trial quota management, batch operations, sandbox token validation,
+                CSRF/origin enforcement, and role-based permission control.
               </li>
               <li>
-                Designed pipeline configuration schema and APIs; built artifact collection, trial
-                submission quota management, batch operations, sandbox token validation, CSRF/origin
-                enforcement, and API permission control.
+                <strong>Frontend:</strong> Built pipeline editing UI, artifact/case output viewer, trial
+                submission history flows, and static analysis report display.
               </li>
               <li>
-                Built pipeline editing UI, artifact/case output viewer, trial submission history
-                flows, and static analysis report display.
-              </li>
-              <li>
-                Set up production deployment from scratch with Cloudflare Pages, GCE backend,
-                Cloudflare Tunnel, CI/CD workflows, domain, and GCP infrastructure.
+                <strong>DevOps:</strong> Deployed from scratch with Cloudflare Pages, GCE, Cloudflare
+                Tunnel, CI/CD workflows, and GCP Artifact Registry.
               </li>
             </ul>
           </article>
@@ -168,15 +164,17 @@
             </p>
             <ul class="resume-bullets">
               <li>
-                Analyzed four vulnerability classes across seven isolated lab environments,
-                including heap buffer overflow, format string injection, use-after-free, and image
-                format parsing.
+                <strong>Scope:</strong> analyzed four vulnerability classes across seven isolated
+                environments — heap buffer overflow, format string injection, use-after-free, and
+                image format parsing.
               </li>
               <li>
-                Applied Valgrind and AddressSanitizer to identify root causes and document
-                exploitation vectors and mitigation strategies per class.
+                <strong>Analysis:</strong> applied Valgrind and AddressSanitizer to identify root
+                causes and document exploitation vectors and mitigation strategies per class.
               </li>
-              <li>Containerized all labs for reproducible, isolated execution.</li>
+              <li>
+                <strong>Infra:</strong> containerized all labs for reproducible, isolated execution.
+              </li>
             </ul>
           </article>
 
@@ -191,14 +189,17 @@
             </p>
             <ul class="resume-bullets">
               <li>
-                Built an NTNU course enrollment service that monitors seat quota availability and
-                automatically enrolls when slots open.
+                <strong>Core:</strong> monitors NTNU course seat quota availability and automatically
+                enrolls when slots open.
               </li>
               <li>
-                Implemented browser fingerprint simulation to bypass anti-bot detection and
-                real-time WebSocket push notifications.
+                <strong>Anti-bot:</strong> browser fingerprint simulation to bypass detection; real-time
+                WebSocket push notifications on enrollment events.
               </li>
-              <li>Added role-based authentication, Celery priority queuing, and Flower monitoring.</li>
+              <li>
+                <strong>Backend:</strong> role-based authentication, Celery priority queuing, and
+                Flower monitoring.
+              </li>
             </ul>
           </article>
 
@@ -213,12 +214,12 @@
             </p>
             <ul class="resume-bullets">
               <li>
-                Built a 3D bin-packing optimizer for show production equipment loading using a greedy algorithm
-                and voxel-grid collision detection.
+                <strong>Algorithm:</strong> 3D bin-packing optimizer for show production equipment
+                loading using a greedy algorithm and voxel-grid collision detection.
               </li>
               <li>
-                Implemented three packing modes with auto-escalation and delivered both interactive
-                3D and engineering-oriented 2D views.
+                <strong>UX:</strong> three packing modes with auto-escalation; both interactive 3D
+                and engineering-oriented 2D views.
               </li>
             </ul>
           </article>
@@ -234,21 +235,21 @@
             </p>
             <ul class="resume-bullets">
               <li>
-                Built a full-stack equipment management platform for show production professionals,
+                <strong>Platform:</strong> full-stack equipment management for show production,
                 tracking device states across warehouse, on-site, rental, and maintenance workflows.
               </li>
               <li>
-                Architected 10 domain modules including scheduling with over-allocation conflict
-                detection, rental agreement lifecycle management, direct schedule-to-schedule
-                equipment transfers, custom metadata fields, and Gantt-style timeline visualization.
+                <strong>Engine:</strong> conflict detection for resource over-allocation across
+                overlapping schedules; rental lifecycle state machine (booking → deployment →
+                return); direct cross-schedule transfers; Gantt-style timeline visualization.
               </li>
               <li>
-                Implemented async in-app and email notification delivery via Celery, full audit
-                trail across all critical entities, and batch CSV/Excel import for large equipment
-                catalogs.
+                <strong>Async:</strong> in-app and email notification delivery via Celery; full
+                audit trail across all critical entities; batch CSV/Excel import.
               </li>
               <li>
-                Deployed with Docker Compose and Nginx; full API documented via OpenAPI/Swagger.
+                <strong>Deployment:</strong> Docker Compose + Nginx; full API documented via
+                OpenAPI/Swagger.
               </li>
             </ul>
           </article>
@@ -264,10 +265,9 @@
             </p>
             <ul class="resume-bullets">
               <li>
-                Built camp notifications and interactive bot commands under counselor guidance
-                during SITCON Camp 2024.
+                Served as Team Counselor; mentored participants in designing and delivering the bot,
+                guiding the team from ideation through end-to-end deployment within the camp timeline.
               </li>
-              <li>Delivered the team's end-to-end project within the camp timeline.</li>
             </ul>
           </article>
         </section>
@@ -306,18 +306,17 @@
             </header>
             <ul class="resume-bullets">
               <li>
-                Led cross-functional operations for an annual technical conference with 1000+
-                attendees and 150+ staff, spanning logistics, speaker management, program
-                planning, and sponsorship.
+                <strong>Scope:</strong> cross-functional operations for 1000+ attendees and 150+
+                staff — logistics, speaker management, program planning, and sponsorship.
               </li>
               <li>
-                Drove coordination across speaker submission review, program planning, and
-                sponsorship management, achieving zero critical failures on event day; managed
-                project tracking and cross-team coordination via GitLab.
+                <strong>Delivery:</strong> drove speaker submission review, program planning, and
+                sponsorship management; achieved zero critical failures on event day; managed
+                project tracking via GitLab.
               </li>
               <li>
-                Coordinated 10+ working groups, resolved inter-team dependencies, and managed
-                escalation paths across the full planning cycle.
+                <strong>Coordination:</strong> led 10+ working groups, resolved inter-team
+                dependencies, and managed escalation paths across the full planning cycle.
               </li>
             </ul>
           </article>
@@ -329,16 +328,17 @@
             </header>
             <ul class="resume-bullets">
               <li>
-                Founded the school's competitive programming team and established its
-                organizational structure, training guidelines, and contest registration pipeline.
+                <strong>Founded:</strong> established the team's organizational structure, training
+                guidelines, and contest registration pipeline from scratch.
               </li>
               <li>
-                Organized algorithm workshops, winter/summer training camps, and hosted
-                intercollegiate friendly contests.
+                <strong>Programs:</strong> organized algorithm workshops, winter/summer training
+                camps, and hosted intercollegiate friendly contests.
               </li>
               <li>
-                Built and maintained an internal online judge system for practice problems and mock
-                contests; designed curriculum covering ICPC, TOI, and APCS categories.
+                <strong>Systems:</strong> self-hosted a CMS (Contest Management System) to olympiad
+                standards; built and maintained an internal online judge; designed curriculum
+                covering ICPC, TOI, and APCS categories.
               </li>
             </ul>
           </article>
@@ -349,8 +349,14 @@
               <p class="resume-entry-date">Sep 2021 – Jan 2023</p>
             </header>
             <ul class="resume-bullets">
-              <li>Administered campus network infrastructure and provided cross-department technical support.</li>
-              <li>Improved the IT class grading system and internal online judge platform.</li>
+              <li>
+                <strong>Operations:</strong> administered campus network infrastructure and provided
+                cross-department technical support.
+              </li>
+              <li>
+                <strong>Dev:</strong> improved the IT class grading system and internal online judge
+                platform.
+              </li>
             </ul>
           </article>
 
@@ -361,12 +367,12 @@
             </header>
             <ul class="resume-bullets">
               <li>
-                Worked across 100+ productions in roles spanning lighting design, lighting system
-                engineering, and follow spot operation for various clients and production companies.
+                <strong>Scale:</strong> 100+ productions spanning lighting design, system
+                engineering, and follow spot operation across various clients and companies.
               </li>
               <li>
-                Delivered shows across major venues including Taipei Arena, Kaohsiung Music Center,
-                and Taipei Music Center.
+                <strong>Venues:</strong> Taipei Arena, Taipei Dome, Kaohsiung Music Center, and
+                Taipei Music Center.
               </li>
             </ul>
           </article>
@@ -378,23 +384,23 @@
             </header>
             <ul class="resume-bullets">
               <li>
-                Founded a personal show production brand focused on lighting infrastructure and
-                production software; grew studio annual revenue to NTD 1.5M+.
+                <strong>Brand:</strong> personal show production brand focused on lighting
+                infrastructure and production software; grew annual revenue to NTD 1.5M+.
               </li>
               <li>
-                Designed and developed an SMS (Stage Management System) to synchronize cross-venue
-                hardware scheduling, manage 1000+ pieces of equipment, detect conflicts, and handle
-                rental contracts; deployed in production and advanced a live trial with a
-                large-scale lighting engineering firm.
+                <strong>SMS:</strong> Stage Management System synchronizing cross-venue hardware
+                scheduling, managing 1000+ pieces of equipment, detecting conflicts, and handling
+                rental contracts; deployed in production; advanced a live trial with a large-scale
+                lighting engineering firm.
               </li>
               <li>
-                Developed BuildShowfileMagic, a grandMA2 lighting console plugin written in Lua,
-                to automate showfile generation from CSV data — producing per-artist executor pages,
-                BPM-synced cues, and color-coded sequences for multi-artist productions.
+                <strong>Plugin:</strong> BuildShowfileMagic — a grandMA2 Lua plugin automating
+                showfile generation from CSV: per-artist executor pages, BPM-synced cues, and
+                color-coded sequences for multi-artist productions.
               </li>
               <li>
-                Built a 3D rig-loading simulator to optimize equipment packing across trucks for
-                touring shows, reducing load-in planning time.
+                <strong>Simulator:</strong> 3D rig-loading simulator optimizing equipment packing
+                across trucks for touring shows, reducing load-in planning time.
               </li>
             </ul>
           </article>
