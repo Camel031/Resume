@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "motivation",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "4278"],
+      "port": 4278,
+      "autoPort": false
+    }
+  ]
+}

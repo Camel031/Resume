@@ -7,7 +7,7 @@ OUT_DIR  = r"C:/Users/黃以謙/Desktop/@College/Class/Resume"
 PAGES = [
     ("motivation",  f"{BASE_URL}/motivation.html"),
     ("lor_chi",     f"{BASE_URL}/lor_chi.html"),
-    ("index",       f"{BASE_URL}/index.html"),
+    ("index",       f"{BASE_URL}/resume.html"),
 ]
 
 def cdp_call(ws_url, method, params=None):

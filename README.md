@@ -3,7 +3,7 @@
 This folder is the standalone resume workspace at the repository root.
 
 Files:
-- `index.html`: the resume source
+- `resume.html`: the resume source
 - `resume.css`: page and print styling
 - `yi-cian-huang-resume.pdf`: generated PDF output
 
@@ -21,5 +21,5 @@ Generate PDF:
 google-chrome --headless --disable-gpu --no-sandbox \
   --print-to-pdf="$PWD/resume/yi-cian-huang-resume.pdf" \
   --no-pdf-header-footer \
-  "file://$PWD/resume/index.html"
+  "file://$PWD/resume/resume.html"
 ```
