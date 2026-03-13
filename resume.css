@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&family=Source+Serif+4:opsz,wght@8..60,300..700&display=swap");
+
+html {
+  background: #e8e8e8;
+}
+
+body {
+  margin: 0;
+  background: #e8e8e8;
+  color: #1a1a1a;
+  font-family: "Source Serif 4", "Noto Serif TC", Georgia, "Times New Roman", serif;
+  font-size: 14px;
+}
+
+a {
+  color: #a0522d;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.resume-shell {
+  min-height: 100vh;
+  padding: 28px 16px 48px;
+}
+
+.resume-paper {
+  width: min(100%, 800px);
+  margin: 0 auto;
+  padding: 44px 52px 52px;
+  background: #ffffff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  line-height: 1.5;
+}
+
+/* ── Header ── */
+.resume-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 4px;
+}
+
+.resume-hero-left h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.resume-english-name {
+  margin: 3px 0 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #333;
+}
+
+.resume-title {
+  margin: 2px 0 0;
+  font-size: 0.88rem;
+  line-height: 1.3;
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
+.resume-summary {
+  margin: 8px 0 0;
+  font-size: 0.84rem;
+  color: #444;
+  line-height: 1.55;
+  max-width: 100%;
+}
+
+.resume-hero-right {
+  padding-top: 4px;
+  text-align: right;
+  font-size: 0.86rem;
+  color: #333;
+  white-space: nowrap;
+}
+
+.resume-hero-right p {
+  margin: 0 0 3px;
+}
+
+.resume-hero-right a {
+  color: #a0522d;
+  text-decoration: none;
+}
+
+/* ── Sections ── */
+.resume-section {
+  margin-top: 20px;
+}
+
+.resume-section h2 {
+  margin: 0 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid #1a1a1a;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+}
+
+/* ── Entries ── */
+.resume-entry,
+.resume-awards {
+  break-inside: avoid;
+}
+
+.resume-entry + .resume-entry,
+.resume-entry + .resume-awards {
+  margin-top: 13px;
+}
+
+.resume-entry-header h3,
+.resume-awards h3 {
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.resume-entry-date {
+  margin: 2px 0 0;
+  font-size: 0.82rem;
+  color: #a0522d;
+}
+
+.resume-entry-subtitle {
+  margin: 4px 0 0;
+  font-size: 0.84rem;
+  color: #555;
+}
+
+.resume-entry-link {
+  margin: 2px 0 0;
+  font-size: 0.82rem;
+}
+
+.resume-entry-link a {
+  color: #a0522d;
+}
+
+/* ── Bullets ── */
+.resume-bullets {
+  margin: 6px 0 0;
+  padding-left: 20px;
+}
+
+.resume-bullets li {
+  margin-bottom: 4px;
+  font-size: 0.84rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ── Coursework ── */
+.resume-coursework {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px 24px;
+  margin-top: 10px;
+}
+
+.resume-coursework p {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.84rem;
+  color: #333;
+}
+
+.resume-coursework strong {
+  color: #1a1a1a;
+}
+
+/* ── Tech Stack ── */
+.resume-tech-stack p {
+  margin: 0 0 7px;
+  font-size: 0.84rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.resume-tech-stack strong {
+  color: #1a1a1a;
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .resume-paper {
+    padding: 28px 22px 36px;
+  }
+
+  .resume-hero {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .resume-hero-right {
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .resume-coursework {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Print ── */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm 14mm;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+  }
+
+  body {
+    color: #1a1a1a;
+    font-weight: 360;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .resume-shell {
+    min-height: auto;
+    padding: 0;
+  }
+
+  .resume-paper {
+    width: auto;
+    padding: 0;
+    background: #ffffff;
+    box-shadow: none;
+  }
+
+  .resume-section {
+    margin-top: 16px;
+  }
+
+  .resume-section h2 {
+    font-size: 0.95rem;
+  }
+
+  .resume-entry-header h3,
+  .resume-awards h3 {
+    font-size: 0.9rem;
+  }
+
+  .resume-bullets li,
+  .resume-tech-stack p,
+  .resume-summary,
+  .resume-entry-subtitle,
+  .resume-entry-date,
+  .resume-entry-link {
+    font-size: 0.82rem;
+  }
+
+  .resume-coursework p {
+    font-size: 0.8rem;
+  }
+
+  /* Restore 2-column layouts — print width (~698px) triggers the mobile breakpoint */
+  .resume-hero {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .resume-hero-right {
+    text-align: right;
+    padding-top: 4px;
+  }
+
+  .resume-coursework {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

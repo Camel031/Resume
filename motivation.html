@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yi-Cian Huang — Statement of Purpose</title>
+    <link rel="stylesheet" href="./resume.css" />
+    <style>
+      .sop-header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 24px;
+        align-items: end;
+        padding-bottom: 18px;
+        border-bottom: 1.5px solid #1a1a1a;
+        margin-bottom: 32px;
+      }
+
+      .sop-header-left h1 {
+        margin: 0 0 3px;
+        font-size: 1.75rem;
+        font-weight: 700;
+        line-height: 1.1;
+        color: #1a1a1a;
+      }
+
+      .sop-header-left .sop-subtitle {
+        margin: 0;
+        font-size: 0.88rem;
+        color: #555;
+      }
+
+      .sop-header-right {
+        text-align: right;
+        font-size: 0.86rem;
+        color: #333;
+        white-space: nowrap;
+      }
+
+      .sop-header-right p {
+        margin: 0 0 3px;
+      }
+
+      .sop-header-right a {
+        color: #a0522d;
+        text-decoration: none;
+      }
+
+      .sop-doc-title {
+        margin: 0 0 28px;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        letter-spacing: 0.02em;
+      }
+
+      .sop-body p {
+        margin: 0 0 18px;
+        font-size: 0.9rem;
+        color: #222;
+        line-height: 1.85;
+        text-align: justify;
+      }
+
+      .sop-body p:last-child {
+        margin-bottom: 0;
+      }
+
+      code {
+        font-family: inherit;
+      }
+
+      @media print {
+        .sop-body p {
+          font-weight: 360;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="resume-shell">
+      <div class="resume-paper">
+
+        <header class="sop-header">
+          <div class="sop-header-left">
+            <h1>黃以謙 &thinsp;<span style="font-size:1rem; font-weight:400; color:#555;">Yi-Cian Huang</span></h1>
+            <p class="sop-subtitle">Security Research · Software Engineering · OSCP (in progress)</p>
+          </div>
+          <div class="sop-header-right">
+            <p>Taipei, Taiwan</p>
+            <p><a href="mailto:kg.cheng777@gmail.com">kg.cheng777@gmail.com</a></p>
+            <p><a href="https://github.com/Camel031">github.com/Camel031</a></p>
+          </div>
+        </header>
+
+        <p class="sop-doc-title">Motivation Letter — Academia Sinica Research Internship</p>
+
+        <div class="sop-body">
+
+          <p>
+            In my second year of high school, I placed 15th at the
+            <strong>NHSPC Regional Programming Contest</strong> and walked away feeling less
+            satisfied than I had expected. I had spent months learning algorithms, founded my
+            school's <strong>competitive programming team at CLHS</strong>, built its training
+            curriculum, and ran winter camps. The rankings improved. But the more time I spent
+            optimizing within the closed world of a judge system, the more I kept asking what,
+            exactly, I was solving. The problems were elegant. The feedback was immediate and
+            clean. And none of it touched anything real. There was also something harder to
+            admit: the gains were flattening. I had done everything right — built the team,
+            ran the camps, worked through the algorithms systematically — and the ceiling
+            was getting closer. Some find that a reason to push harder; I found it a reason
+            to ask whether I was climbing the right wall. That restlessness
+            followed me into university.
+          </p>
+
+          <p>
+            At <strong>National Taiwan Normal University</strong>, I chose a
+            <strong>double major in Computer Science and Life Science</strong> partly to escape
+            that lane and find problems that were genuinely harder to bound. Life Science
+            offered them — but pure biology moved by intuition and experiment in ways that
+            felt foreign to how I thought. The transition was harder than I had expected:
+            caught between the competitive-programmer identity I was leaving and a field I
+            hadn't yet internalized, my grades in the first two years showed the confusion —
+            dipping as low as 2.09 in a semester. Things started connecting in my third year;
+            my GPAs for the three semesters since have been 3.27, 4.15, and 4.14. What
+            clicked, eventually, was <strong>Bioinformatics</strong>. The data was noisy,
+            high-dimensional, deeply personal — the kind that sits at the boundary between
+            computation and biology in a way that resists clean formulation. One question
+            kept coming back: what does it mean to extract a useful signal from data that
+            its subject might not want exposed?
+          </p>
+
+          <p>
+            That question sharpened in my
+            <strong>Information Security Practices for Industries: Attack and Defense</strong>
+            course, and more so during the
+            <strong>AIS BOMBE red/blue team CTF</strong>. On the offensive side, I built a
+            full evasion chain: PPID spoofing, dynamic IAT resolution, XOR + Base64 payload
+            encryption, and decoy process injection to bypass static signatures and behavioral
+            analysis — extracting flags via <code>VirtualQueryEx</code> /
+            <code>ReadProcessMemory</code> and credentials via Living-off-the-Land, all
+            without touching disk. On the defensive side, I co-built an
+            <strong>ETW-based behavioral monitor</strong> with file I/O and TCP event
+            tracing, and implemented recursive parent-chain attribution to associate spawned
+            processes with malicious ancestors. Simultaneously building an attack and
+            building the detector for it — watching each side expose the blind spots of the
+            other — was the moment security stopped being a subject and became a practice.
+            What stayed was the habit of thinking about systems from both sides of the
+            boundary. It also showed me where my own gaps were, which is part of why I
+            started working toward the <strong>OSCP</strong> — treating it less as a
+            credential than as a structured framework to systematically audit and extend my
+            offensive depth across areas a single course or CTF doesn't cover.
+          </p>
+
+          <p>
+            The question became more concrete when I joined
+            <strong>Normal OJ</strong> as <strong>full-stack Tech Lead and
+            Sandbox subteam lead</strong> for NTNU's CS Department — a production online judge system that
+            had been passed down across multiple cohorts. My first priority was stabilizing
+            what was there: hardening the sandbox execution layer, cleaning up the CI/CD
+            pipeline, and coordinating backend, frontend, and cloud deployment across GCP
+            and Cloudflare before extending any of it. Auditing the codebase as I took over,
+            I found real vulnerabilities: an unauthenticated <code>GET /ranking</code>
+            endpoint returning the complete user database — email-derived MD5 hashes, role
+            assignments, submission histories — with no credentials required; and homework
+            management routes whose access control existed only in the frontend. I documented
+            both as formal write-ups. Finding a vulnerability in a CTF is one thing; finding
+            it in code you're responsible for shipping to real users is another. The question
+            shifted from how systems fail to what it would take to build one that doesn't.
+            That led me to think about adding a behavioral authentication layer on top of the
+            sandbox — but any system that authenticates by observing how you move or type
+            has to transmit those signals somewhere, and they're as personal as a fingerprint
+            with no way to issue a new one.
+          </p>
+
+          <p>
+            That question led me to homomorphic encryption, and eventually into NTNU's
+            <strong>Applied Cryptography and Information Security Laboratory</strong> under
+            Prof. Chi Po-Wen (紀博文), where I am working on
+            <em>Privacy-Preserving Continuous Behavioral Authentication via
+            FHE-Accelerated BTF and FIDO2 PRF Extension</em> — an open problem:
+            <strong>FIDO</strong> and WebAuthn secure the login event but offer no
+            protection against post-login session hijacking. Behavioral biometrics — mouse
+            dynamics, keystroke patterns, touch gestures, and other continuous signals — can
+            fill that gap, but virtually all deployed systems today send those raw signals
+            to the server; a breach permanently compromises every user's behavioral profile.
+            <strong>Fully Homomorphic Encryption</strong> resolves this by allowing
+            inference directly on ciphertext, returning only a binary result — but FHE
+            ciphertexts are orders of magnitude larger than plaintext, making real-time
+            transmission infeasible without compression. My design addresses this by
+            encrypting behavioral features with <strong>Trivium</strong> (De Cannière &amp; Preneel; eSTREAM portfolio) before sending — achieving <strong>121×</strong> compression
+            — while transciphering into the FHE domain on the server side. The last piece
+            is key custody: by routing decryption through the user's
+            <strong>FIDO hardware authenticator</strong>, the final step happens inside the
+            secure enclave rather than on any server.
+          </p>
+
+          <p>
+            Outside the lab, the same period deepened my connection to the technical
+            community. I've been involved with <strong>SITCON</strong> — Taiwan's largest student-run
+            technology conference — for over five years, and in 2023–2024 served as
+            <strong>Vice Head Coordinator</strong>. That meant overseeing 10+ working
+            groups, handling speaker submission review, program coordination, and sponsorship
+            management via GitLab, and getting <strong>1,000+ attendees and 150+
+            staff</strong> through event day without critical failures. I also served as
+            <strong>Team Counselor at SITCON Camp 2024</strong>, mentoring a hackathon team
+            through full project delivery. Through COSCUP and TWNOG I've stayed connected
+            to the open-source and networking communities.
+          </p>
+
+          <p>
+            Beyond research and community work, I have a consistent record of shipping
+            production systems under real conditions. I founded
+            <strong>萬應製作 All-In-One Production</strong> and built an
+            <strong>SMS (Stage Management System)</strong> now managing 1,000+ pieces of
+            equipment across concurrent live productions. The work —
+            <strong>programming grandMA2 consoles</strong>, designing signal flow and
+            fixture networks, building a Lua plugin for showfile generation and a 3D truck
+            layout simulator for load-in planning, with LLM-assisted prototyping throughout
+            — gave me a rule I carry into every software project: the system has to handle
+            failure, because something always breaks in ways the spec didn't anticipate.
+          </p>
+
+          <p>
+            What draws me to <strong>Academia Sinica</strong> is not a single research
+            direction, but the breadth and rigor of the work happening there. My current
+            interests sit at the intersection of security, privacy, and bioinformatics. I've
+            trained CNNs, fine-tuned open-source models with <strong>PyTorch</strong>, and
+            have the FHE project ongoing in Prof. Chi's lab, but there's only so far you
+            get working on your own. My longer-term goal is graduate research, and I believe
+            the most direct path there runs through an environment like this one.
+          </p>
+
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

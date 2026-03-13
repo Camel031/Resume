@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yi-Cian Huang Resume</title>
+    <link rel="stylesheet" href="./resume.css" />
+  </head>
+  <body>
+    <main class="resume-shell">
+      <div class="resume-paper">
+        <header class="resume-hero">
+          <div class="resume-hero-left">
+            <h1>黃以謙</h1>
+            <p class="resume-english-name">Yi-Cian Huang</p>
+            <p class="resume-title">Security Research · Software Engineering · OSCP (in progress)</p>
+            <p class="resume-summary">
+              Security-focused software engineer and researcher at NTNU. Builds production systems
+              spanning sandbox design, DevSecOps delivery, and full-stack development while conducting
+              FHE-based behavioral authentication research. Proven track record across 700-person
+              conference operations, live-venue show production infrastructure, and competitive programming
+              community leadership.
+            </p>
+          </div>
+          <div class="resume-hero-right">
+            <p>Taipei, Taiwan</p>
+            <p><a href="mailto:kg.cheng777@gmail.com">kg.cheng777@gmail.com</a></p>
+            <p><a href="https://github.com/Camel031">github.com/Camel031</a></p>
+          </div>
+        </header>
+
+        <section class="resume-section">
+          <h2>Education</h2>
+          <article class="resume-entry">
+            <header class="resume-entry-header">
+              <h3>National Taiwan Normal University (NTNU)</h3>
+              <p class="resume-entry-date">Sep 2022 – Present</p>
+            </header>
+            <p class="resume-entry-subtitle">
+              B.S. in Computer Science &amp; Information Engineering / Life Science — Double Major
+            </p>
+            <div class="resume-coursework">
+              <p><span>Adv. Info. Sec. Practices for Industries: Attack &amp; Defense</span><strong>A+</strong></p>
+              <p><span>Info. Sec. Practices for Industries: Attack &amp; Defense</span><strong>A+</strong></p>
+              <p><span>Information Security</span><strong>A+</strong></p>
+              <p><span>Software Engineering</span><strong>A+</strong></p>
+              <p><span>Bioinformatics Algorithms</span><strong>A+</strong></p>
+              <p><span>Biotechnology</span><strong>A+</strong></p>
+              <p><span>Bioinformatics Programming</span><strong>A+</strong></p>
+              <p><span>Computer Networks</span><strong>A</strong></p>
+            </div>
+          </article>
+        </section>
+
+        <section class="resume-section">
+          <h2>Research Experience</h2>
+          <article class="resume-entry">
+            <header class="resume-entry-header">
+              <h3>Undergraduate Researcher • Applied Cryptography and Information Security Lab, NTNU</h3>
+              <p class="resume-entry-date">Feb 2026 – Present</p>
+            </header>
+            <p class="resume-entry-subtitle">Privacy-Preserving Continuous Behavioral Authentication via FHE-Accelerated BTF and FIDO2 PRF Extension</p>
+            <p class="resume-entry-subtitle" style="margin-top:3px;">Advisor: Prof. 紀博文 (Chi Po-Wen)</p>
+            <ul class="resume-bullets">
+              <li>
+                Research problem: traditional continuous authentication exposes privacy by
+                transmitting or storing raw behavioral signals.
+              </li>
+              <li>
+                Designing a privacy-preserving continuous authentication pipeline processing
+                multi-modal behavioral signals — mouse dynamics, keystroke patterns, and touch
+                gestures — using Fully Homomorphic Encryption (FHE).
+              </li>
+              <li>
+                Implementing feature extraction and ciphertext-domain inference so the
+                authentication server learns nothing beyond an accept/reject result.
+              </li>
+              <li>
+                Keywords: Privacy-Preserving, Behavioral Biometrics, Homomorphic Encryption,
+                Continuous Authentication, Implementation.
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="resume-section">
+          <h2>Projects</h2>
+
+          <article class="resume-entry">
+            <header class="resume-entry-header">
+              <h3>AIS BOMBE • Red/Blue Team CTF</h3>
+              <p class="resume-entry-date">Selected Project</p>
+            </header>
+            <p class="resume-entry-subtitle">C# · .NET 6 · ETW · Windows Internals</p>
+            <p class="resume-entry-link">
+              <a href="https://github.com/Camel031/AIS-BOMBE-Team-No_Name">github.com/Camel031/AIS-BOMBE-Team-No_Name</a>
+            </p>
+            <ul class="resume-bullets">
+              <li>
+                Developed a full evasion chain with PPID spoofing, dynamic IAT resolution, XOR +
+                Base64 payload encryption, and decoy process injection to bypass static signatures
+                and behavioral analysis.
+              </li>
+              <li>
+                Extracted target flags via VirtualQueryEx + ReadProcessMemory and retrieved
+                browser-stored credentials with Living-off-the-Land techniques without dropping
+                binaries to disk.
+              </li>
+              <li>
+                Co-built an ETW-based monitor with file I/O and TCP event tracing; implemented
+                recursive parent-chain attribution to associate spawned processes with malicious
+                ancestors.
+              </li>
+              <li>
+                Produced detailed exploit chains with root-cause analysis and detection signatures
+                for each attack path.
+              </li>
+            </ul>
+          </article>
+
+          <article class="resume-entry">
+            <header class="resume-entry-header">
+              <h3>Normal OJ • Software Engineering Course Project</h3>
+              <p class="resume-entry-date">Selected Project</p>
+            </header>
+            <p class="resume-entry-subtitle">Python · Vue.js · Docker · MinIO · GCP</p>
+            <p class="resume-entry-link">
+              <a href="https://github.com/2025-NTNU-Software-Engineering-Team-1">github.com/2025-NTNU-Software-Engineering-Team-1</a>
+            </p>
+            <ul class="resume-bullets">
+              <li>
+                Served as full-stack Tech Lead and Sandbox subteam lead in a 14-person team maintaining NTNU CS
+                Department's production online judge system; acted as de facto architect and
+                interim PM during PM absences.
+              </li>
+              <li>
+                Architected a multi-mode execution pipeline supporting Standard, Interactive, ZIP,
+                Function-only, and AI-Checker submissions.
+              </li>
+              <li>
+                Extended seccomp rules and built network isolation with DNS sinkhole and IPv6
+                blocking for multi-tenant sandbox security.
+              </li>
+              <li>
+                Designed pipeline configuration schema and APIs; built artifact collection, trial
+                submission quota management, batch operations, sandbox token validation, CSRF/origin
+                enforcement, and API permission control.
+              </li>
+              <li>
+                Built pipeline editing UI, artifact/case output viewer, trial submission history
+                flows, and static analysis report display.
+              </li>
+              <li>
+                Set up production deployment from scratch with Cloudflare Pages, GCE backend,
+                Cloudflare Tunnel, CI/CD workflows, domain, and GCP infrastructure.
+              </li>
+            </ul>
+          </article>
+
+          <article class="resume-entry">
+            <header class="resume-entry-header">
+              <h3>DevSecOps Labs • Security Laboratory Series</h3>
+              <p class="resume-entry-date">Selected Project</p>
+            </header>
+            <p class="resume-entry-subtitle">C · Docker · Valgrind · AddressSanitizer</p>
+            <p class="resume-entry-link">
+              <a href="https://github.com/Camel031/DevSecOpsLabs-master">github.com/Camel031/DevSecOpsLabs-master</a>
+            </p>
+            <ul class="resume-bullets">
+              <li>
+                Analyzed four vulnerability classes across seven isolated lab environments,
+                including heap buffer overflow, format string injection, use-after-free, and image
+                format parsing.
+              </li>
+              <li>
+                Applied Valgrind and AddressSanitizer to identify root causes and document
+                exploitation vectors and mitigation strategies per class.
+              </li>
+              <li>Containerized all labs for reproducible, isolated execution.</li>
+            </ul>
+          </article>
+
+          <article class="resume-entry">
+            <header class="resume-entry-header">
+              <h3>ClassEnrollBot • Automation Service</h3>
+              <p class="resume-entry-date">Selected Project</p>
+            </header>
+            <p class="resume-entry-subtitle">FastAPI · React · TypeScript · PostgreSQL · Redis · Docker</p>
+            <p class="resume-entry-link">
+              <a href="https://github.com/Camel031/ClassEnrollBot">github.com/Camel031/ClassEnrollBot</a>
+            </p>
+            <ul class="resume-bullets">
+              <li>
+                Built an NTNU course enrollment service that monitors seat quota availability and
+                automatically enrolls when slots open.
+              </li>
+              <li>
+                Implemented browser fingerprint simulation to bypass anti-bot detection and
+                real-time WebSocket push notifications.
+              </li>
+              <li>Added role-based authentication, Celery priority queuing, and Flower monitoring.</li>
+            </ul>
+          </article>
+
+          <article class="resume-entry">
+            <header class="resume-entry-header">
+              <h3>Pro Truck Loading Simulator • Optimization Tool</h3>
+              <p class="resume-entry-date">Selected Project</p>
+            </header>
+            <p class="resume-entry-subtitle">Python · Streamlit · Plotly · NumPy</p>
+            <p class="resume-entry-link">
+              <a href="https://truck-loader-simulator.streamlit.app">truck-loader-simulator.streamlit.app</a>
+            </p>
+            <ul class="resume-bullets">
+              <li>
+                Built a 3D bin-packing optimizer for show production equipment loading using a greedy algorithm
+                and voxel-grid collision detection.
+              </li>
+              <li>
+                Implemented three packing modes with auto-escalation and delivered both interactive
+                3D and engineering-oriented 2D views.
+              </li>
+            </ul>
+          </article>
+
+          <article class="resume-entry">
+            <header class="resume-entry-header">
+              <h3>SMS — Stage Management System • Show Production Tool</h3>
+              <p class="resume-entry-date">Selected Project</p>
+            </header>
+            <p class="resume-entry-subtitle">Python · Django · React · TypeScript · PostgreSQL · Redis · Celery · Docker</p>
+            <p class="resume-entry-link">
+              <a href="https://github.com/Camel031/SMS">github.com/Camel031/SMS</a>
+            </p>
+            <ul class="resume-bullets">
+              <li>
+                Built a full-stack equipment management platform for show production professionals,
+                tracking device states across warehouse, on-site, rental, and maintenance workflows.
+              </li>
+              <li>
+                Architected 10 domain modules including scheduling with over-allocation conflict
+                detection, rental agreement lifecycle management, direct schedule-to-schedule
+                equipment transfers, custom metadata fields, and Gantt-style timeline visualization.
+              </li>
+              <li>
+                Implemented async in-app and email notification delivery via Celery, full audit
+                trail across all critical entities, and batch CSV/Excel import for large equipment
+                catalogs.
+              </li>
+              <li>
+                Deployed with Docker Compose and Nginx; full API documented via OpenAPI/Swagger.
+              </li>
+            </ul>
+          </article>
+
+          <article class="resume-entry">
+            <header class="resume-entry-header">
+              <h3>SITCON Camp 2024 Telegram Bot • Hackathon Deliverable</h3>
+              <p class="resume-entry-date">Selected Project</p>
+            </header>
+            <p class="resume-entry-subtitle">Python · python-telegram-bot</p>
+            <p class="resume-entry-link">
+              <a href="https://github.com/sitcon-tw/sc2024-t1">github.com/sitcon-tw/sc2024-t1</a>
+            </p>
+            <ul class="resume-bullets">
+              <li>
+                Built camp notifications and interactive bot commands under counselor guidance
+                during SITCON Camp 2024.
+              </li>
+              <li>Delivered the team's end-to-end project within the camp timeline.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="resume-section">
+          <h2>Awards &amp; Certifications</h2>
+          <ul class="resume-bullets">
+            <li>OSCP (Offensive Security Certified Professional) — in progress</li>
+            <li>TOEFL iBT — 106</li>
+            <li>TOEIC — 985</li>
+            <li>APCS — Concept 4 / Implementation 4</li>
+            <li>NHSPC Regional — 15th Place</li>
+          </ul>
+        </section>
+
+        <section class="resume-section">
+          <h2>Community Involvement</h2>
+          <ul class="resume-bullets">
+            <li>SITCON — Vice Head Coordinator (2023–2024); active contributor across 5+ annual conferences.</li>
+            <li>
+              SITCON Camp 2024 — Served as Team Counselor, hosted the opening ceremony introduction,
+              mentored the hackathon track, and guided delivery of the Telegram bot project.
+            </li>
+            <li>COSCUP — Contributed to conference planning for the open-source community conference.</li>
+            <li>TWNOG — Active participant.</li>
+          </ul>
+        </section>
+
+        <section class="resume-section">
+          <h2>Work Experience</h2>
+
+          <article class="resume-entry">
+            <header class="resume-entry-header">
+              <h3>Vice Head Coordinator • SITCON</h3>
+              <p class="resume-entry-date">Apr 2023 – Apr 2024</p>
+            </header>
+            <ul class="resume-bullets">
+              <li>
+                Led cross-functional operations for an annual technical conference with 1000+
+                attendees and 150+ staff, spanning logistics, speaker management, program
+                planning, and sponsorship.
+              </li>
+              <li>
+                Drove coordination across speaker submission review, program planning, and
+                sponsorship management, achieving zero critical failures on event day; managed
+                project tracking and cross-team coordination via GitLab.
+              </li>
+              <li>
+                Coordinated 10+ working groups, resolved inter-team dependencies, and managed
+                escalation paths across the full planning cycle.
+              </li>
+            </ul>
+          </article>
+
+          <article class="resume-entry">
+            <header class="resume-entry-header">
+              <h3>Competitive Programming Team Lead • CLHS</h3>
+              <p class="resume-entry-date">Oct 2020 – Jun 2022</p>
+            </header>
+            <ul class="resume-bullets">
+              <li>
+                Founded the school's competitive programming team and established its
+                organizational structure, training guidelines, and contest registration pipeline.
+              </li>
+              <li>
+                Organized algorithm workshops, winter/summer training camps, and hosted
+                intercollegiate friendly contests.
+              </li>
+              <li>
+                Built and maintained an internal online judge system for practice problems and mock
+                contests; designed curriculum covering ICPC, TOI, and APCS categories.
+              </li>
+            </ul>
+          </article>
+
+          <article class="resume-entry">
+            <header class="resume-entry-header">
+              <h3>Campus MIS • CLHS</h3>
+              <p class="resume-entry-date">Sep 2021 – Jan 2023</p>
+            </header>
+            <ul class="resume-bullets">
+              <li>Administered campus network infrastructure and provided cross-department technical support.</li>
+              <li>Improved the IT class grading system and internal online judge platform.</li>
+            </ul>
+          </article>
+
+          <article class="resume-entry">
+            <header class="resume-entry-header">
+              <h3>Freelance Lighting Designer &amp; Lighting System Engineer</h3>
+              <p class="resume-entry-date">2023 – Present</p>
+            </header>
+            <ul class="resume-bullets">
+              <li>
+                Worked across 100+ productions in roles spanning lighting design, lighting system
+                engineering, and follow spot operation for various clients and production companies.
+              </li>
+              <li>
+                Delivered shows across major venues including Taipei Arena, Kaohsiung Music Center,
+                and Taipei Music Center.
+              </li>
+            </ul>
+          </article>
+
+          <article class="resume-entry">
+            <header class="resume-entry-header">
+              <h3>Founder &amp; Lighting System Developer • 萬應製作 All-In-One Production</h3>
+              <p class="resume-entry-date">2023 – Present</p>
+            </header>
+            <ul class="resume-bullets">
+              <li>
+                Founded a personal show production brand focused on lighting infrastructure and
+                production software; grew studio annual revenue to NTD 1.5M+.
+              </li>
+              <li>
+                Designed and developed an SMS (Stage Management System) to synchronize cross-venue
+                hardware scheduling, manage 1000+ pieces of equipment, detect conflicts, and handle
+                rental contracts; deployed in production and advanced a live trial with a
+                large-scale lighting engineering firm.
+              </li>
+              <li>
+                Developed BuildShowfileMagic, a grandMA2 lighting console plugin written in Lua,
+                to automate showfile generation from CSV data — producing per-artist executor pages,
+                BPM-synced cues, and color-coded sequences for multi-artist productions.
+              </li>
+              <li>
+                Built a 3D rig-loading simulator to optimize equipment packing across trucks for
+                touring shows, reducing load-in planning time.
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="resume-section">
+          <h2>Tech Stacks</h2>
+          <div class="resume-tech-stack">
+            <p><strong>Programming Language:</strong> Python, TypeScript, C/C++, C#</p>
+            <p><strong>Application Development:</strong> FastAPI, Django, React, Vue.js, PostgreSQL, Redis, Celery</p>
+            <p><strong>Security:</strong> Binary Exploitation, Reverse Engineering, Vulnerability Analysis, Exploit Development, API Security</p>
+            <p><strong>Systems / Sandbox:</strong> Linux namespaces, resource limits, seccomp, Docker, Valgrind, AddressSanitizer</p>
+            <p><strong>Cloud / DevOps:</strong> Docker Compose, GitHub Actions CI/CD, GCP Artifact Registry, Cloudflare Pages, GCE, Nginx</p>
+            <p><strong>Operating System:</strong> Linux (Ubuntu / Kali), Windows</p>
+            <p><strong>Machine Learning:</strong> PyTorch, CNN training, open-source model fine-tuning, data preprocessing &amp; feature engineering</p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
